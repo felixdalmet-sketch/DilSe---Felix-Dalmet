@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dil Se Open Mic — Your Voice. Your Stage. Your Story. A platform for young performers aged 10–25. Hosted by Felix Dalmet.">
+  <meta name="theme-color" content="#101010">
+  <title>Dil Se Open Mic | Your Voice. Your Stage. Your Story.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#101010;--panel:#191919;--panel2:#202020;--orange:#ff5733;--gold:#ffb347;--white:#f7f4ef;--muted:#aaa49e;--line:rgba(255,255,255,.12);--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--white);font-family:"DM Sans",Arial,sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}
+    .container{width:min(var(--max),calc(100% - 44px));margin:auto}.eyebrow{color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.section{padding:104px 0}.section-head{max-width:720px;margin-bottom:42px}.section-head h2{font:600 clamp(2.6rem,6vw,5rem)/.98 "Oswald",sans-serif;letter-spacing:-.025em;text-transform:uppercase;margin:12px 0 18px}.section-head p{color:var(--muted);max-width:610px;margin:0}.accent{color:var(--orange)}.muted{color:var(--muted)}
+    .nav{height:78px;position:fixed;inset:0 0 auto;z-index:50;background:rgba(16,16,16,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font:700 1.12rem "Oswald",sans-serif;letter-spacing:.07em}.brand-mark{width:35px;height:35px;border:1px solid var(--orange);border-radius:50%;display:grid;place-items:center;color:var(--orange);font-size:1rem}.nav-links{display:flex;align-items:center;gap:28px;color:#d1ccc6;font-size:.85rem}.nav-links a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border:1px solid var(--orange);background:var(--orange);color:#150e0b;font-weight:800;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;transition:.25s;cursor:pointer}.nav-cta:hover,.btn:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}.btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.35)}.btn-outline:hover{color:#15100d}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 11px}
+    .hero{min-height:780px;height:100svh;max-height:980px;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;padding:130px 0 70px;background:radial-gradient(ellipse at 76% 46%,rgba(255,87,51,.2),transparent 30%),radial-gradient(ellipse at 82% 15%,rgba(255,179,71,.12),transparent 25%),linear-gradient(110deg,#101010 10%,#151211 58%,#24130f 100%)}.hero:before{content:"";position:absolute;z-index:-1;width:660px;height:660px;right:3%;top:-10%;border-radius:50%;background:radial-gradient(circle,rgba(255,179,71,.16),rgba(255,87,51,.08) 32%,transparent 68%);filter:blur(10px)}.hero:after{content:"";position:absolute;z-index:-1;right:13%;top:0;width:1px;height:90%;background:linear-gradient(transparent,rgba(255,179,71,.28),transparent);transform:rotate(22deg);box-shadow:80px 0 0 rgba(255,255,255,.05),160px 0 0 rgba(255,255,255,.04)}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:40px}.hero-copy{position:relative;z-index:2}.hero-kicker{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:.76rem;letter-spacing:.19em;text-transform:uppercase;font-weight:800}.hero-kicker:before{content:"";width:35px;height:2px;background:var(--orange)}.hero h1{font:700 clamp(4.7rem,10.5vw,9.5rem)/.79 "Oswald",sans-serif;letter-spacing:-.055em;text-transform:uppercase;margin:28px 0 26px}.hero h1 span{display:block;color:var(--orange)}.hero-sub{font-size:clamp(1rem,1.5vw,1.22rem);color:#d1cbc4;max-width:500px}.hero-meta{display:flex;gap:18px;align-items:center;margin:28px 0 30px;color:#e4ded7;font-size:.9rem}.hero-meta span{display:flex;align-items:center;gap:8px}.dot{width:5px;height:5px;background:var(--orange);border-radius:50%}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.hostline{margin-top:35px;color:var(--muted);font-size:.85rem}.hostline strong{color:var(--white)}.hero-art{height:520px;position:relative;display:grid;place-items:center}.spotlight{position:absolute;width:420px;height:520px;top:-4%;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,rgba(255,179,71,.15),rgba(255,87,51,.03) 68%,transparent);clip-path:polygon(39% 0,61% 0,100% 100%,0 100%);filter:blur(7px)}.mic-orbit{position:absolute;width:390px;height:390px;border:1px solid rgba(255,179,71,.18);border-radius:50%;box-shadow:0 0 80px rgba(255,87,51,.08),inset 0 0 60px rgba(255,87,51,.04)}.mic-orbit:before,.mic-orbit:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.09);border-radius:50%;inset:28px}.mic-orbit:after{inset:65px;border-color:rgba(255,87,51,.2)}.mic{position:relative;z-index:2;width:112px;height:300px;filter:drop-shadow(0 20px 35px rgba(0,0,0,.7));transform:rotate(12deg)}.mic-head{height:128px;width:96px;margin:auto;border-radius:48px;background:linear-gradient(90deg,#4c4b49,#c7b8a6 25%,#3b3937 48%,#b5a18c 72%,#383635);border:5px solid #77716a;position:relative;box-shadow:inset 0 0 0 4px #292827}.mic-head:before{content:"";position:absolute;inset:13px 12px;border-radius:30px;background:repeating-linear-gradient(0deg,#252525 0 3px,#a49b8f 4px 5px,#272727 6px 8px);opacity:.9}.mic-neck{width:47px;height:35px;margin:-3px auto 0;background:linear-gradient(90deg,#383735,#b5a48e,#343331)}.mic-body{width:27px;height:135px;margin:auto;background:linear-gradient(90deg,#383634,#c4b49e 45%,#292827);border-radius:0 0 12px 12px}.mic-base{width:105px;height:9px;border-radius:50%;background:#71675b;margin:-2px auto}.orbit-label{position:absolute;font:600 .75rem "Oswald",sans-serif;letter-spacing:.2em;color:rgba(255,255,255,.5);text-transform:uppercase}.orbit-label.one{top:12%;right:0}.orbit-label.two{bottom:12%;left:0}.hero-stamp{position:absolute;right:2%;bottom:7%;width:112px;height:112px;border-radius:50%;border:1px solid rgba(255,179,71,.5);display:grid;place-items:center;text-align:center;color:var(--gold);font:600 .8rem/1.2 "Oswald",sans-serif;letter-spacing:.1em;transform:rotate(10deg)}
+    .scroll-note{position:absolute;bottom:27px;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#8e8780;display:flex;align-items:center;gap:12px}.scroll-note:after{content:"";height:35px;width:1px;background:linear-gradient(var(--orange),transparent);position:absolute;top:22px;left:50%}
+    .ticker{overflow:hidden;background:var(--orange);color:#160e0b;white-space:nowrap;padding:13px 0;font:700 1rem "Oswald",sans-serif;letter-spacing:.12em;text-transform:uppercase}.ticker-track{display:inline-flex;gap:32px;animation:marquee 28s linear infinite}.ticker span:after{content:"✦";margin-left:32px;color:#fff0d6}@keyframes marquee{to{transform:translateX(-50%)}}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.about-art{min-height:420px;position:relative;background:linear-gradient(145deg,#302019,#171717 65%);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}.about-art:before{content:"";position:absolute;width:310px;height:310px;border-radius:50%;border:1px solid rgba(255,179,71,.24);box-shadow:0 0 0 35px rgba(255,179,71,.025),0 0 0 70px rgba(255,87,51,.025)}.quote-mark{position:relative;font:700 11rem/.8 "Oswald",sans-serif;color:var(--orange);opacity:.9}.about-art small{position:absolute;bottom:24px;left:26px;color:#c1b4a6;letter-spacing:.16em;text-transform:uppercase;font-size:.65rem}.about-copy h2{font:600 clamp(2.7rem,5vw,4.6rem)/.98 "Oswald",sans-serif;text-transform:uppercase;margin:13px 0 22px}.about-copy p{color:var(--muted);margin:0 0 25px}.values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}.value{border-top:1px solid var(--line);padding:14px 0;color:#e9e3dc;font-size:.88rem}.value b{color:var(--orange);margin-right:9px}
+    .categories{background:#151515}.category-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}.category-card{grid-column:span 2;min-height:310px;position:relative;overflow:hidden;background:#222;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:flex-end;transition:.35s;isolation:isolate}.category-card:nth-child(4){grid-column:2/span 2}.category-card:nth-child(5){grid-column:4/span 2}.category-card:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--card-bg,linear-gradient(145deg,#402018,#191919))}.category-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(0,0,0,.94),rgba(0,0,0,.06) 85%)}.category-card:hover{transform:translateY(-7px);border-color:rgba(255,87,51,.65)}.category-card:hover:before{transform:scale(1.06)}.category-card:before{transition:transform .5s}.category-card .number{position:absolute;top:22px;left:25px;color:var(--gold);font:600 .85rem "Oswald",sans-serif;letter-spacing:.15em}.category-card .symbol{position:absolute;top:18px;right:24px;font-size:2.2rem;color:rgba(255,255,255,.75)}.category-card h3{font:600 2rem "Oswald",sans-serif;text-transform:uppercase;margin:0 0 8px}.category-card p{font-size:.85rem;color:#c5bdb5;margin:0;max-width:300px}.cat-mimic{--card-bg:radial-gradient(circle at 75% 30%,rgba(255,179,71,.38),transparent 25%),linear-gradient(145deg,#4b271b,#171717)}.cat-poetry{--card-bg:radial-gradient(circle at 70% 25%,rgba(255,87,51,.35),transparent 27%),linear-gradient(145deg,#38202b,#171717)}.cat-acting{--card-bg:radial-gradient(circle at 70% 25%,rgba(255,179,71,.3),transparent 25%),linear-gradient(145deg,#39302a,#171717)}.cat-comedy{--card-bg:radial-gradient(circle at 70% 25%,rgba(255,87,51,.4),transparent 25%),linear-gradient(145deg,#4b241a,#171717)}.cat-instrumental{--card-bg:radial-gradient(circle at 70% 25%,rgba(255,179,71,.3),transparent 25%),linear-gradient(145deg,#26352f,#171717)}
+    .eligibility{position:relative;overflow:hidden;background:linear-gradient(105deg,#26150f,#151515 60%);border-block:1px solid rgba(255,87,51,.18)}.eligibility:after{content:"10–25";position:absolute;right:-3%;top:50%;transform:translateY(-50%);font:700 clamp(10rem,28vw,25rem)/1 "Oswald",sans-serif;color:rgba(255,255,255,.025);pointer-events:none}.eligibility-inner{display:flex;align-items:center;justify-content:space-between;gap:35px;position:relative;z-index:1}.age-big{font:700 clamp(5rem,12vw,10rem)/.85 "Oswald",sans-serif;letter-spacing:-.05em;color:var(--orange)}.age-big small{font-size:.25em;letter-spacing:.1em;color:var(--gold);display:block;margin-top:15px}.eligibility-copy{max-width:470px}.eligibility-copy h2{font:600 clamp(2.2rem,4vw,3.5rem)/1 "Oswald",sans-serif;text-transform:uppercase;margin:0 0 14px}.eligibility-copy p{color:var(--muted);margin:0}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.why-card{padding:25px 22px;background:var(--panel);border:1px solid var(--line);min-height:185px}.why-card .icon{font-size:1.7rem;color:var(--gold)}.why-card h3{font:600 1.35rem "Oswald",sans-serif;text-transform:uppercase;margin:17px 0 7px}.why-card p{color:var(--muted);font-size:.83rem;margin:0}
+    .event-panel{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);background:var(--panel)}.event-item{padding:25px 20px;border-right:1px solid var(--line)}.event-item:last-child{border:0}.event-item small{display:block;color:var(--gold);font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}.event-item strong{font:600 1.15rem "Oswald",sans-serif;text-transform:uppercase}
+    .register{background:#151515}.register-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.register-aside{position:sticky;top:110px}.register-aside h2{font:600 clamp(3rem,6vw,5.2rem)/.9 "Oswald",sans-serif;text-transform:uppercase;margin:15px 0 20px}.register-aside p{color:var(--muted)}.form-card{background:#1c1c1c;border:1px solid var(--line);padding:32px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.77rem;color:#e7e0d8;font-weight:700}.field input,.field select,.field textarea{width:100%;background:#111;border:1px solid #383431;color:var(--white);padding:13px 14px;outline:none;border-radius:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange)}.field textarea{min-height:100px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#716b65}.hint{font-size:.72rem;color:var(--muted)}.checkline{display:flex;align-items:flex-start;gap:10px;color:#bdb6ae;font-size:.78rem}.checkline input{accent-color:var(--orange);margin-top:4px}.guardian-box{display:none;grid-column:1/-1;padding:17px;border:1px dashed rgba(255,179,71,.4);background:rgba(255,179,71,.04)}.guardian-box.show{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form-submit{width:100%;margin-top:22px}.form-note{font-size:.72rem;color:var(--muted);margin:14px 0 0}.notice{display:none;padding:15px;margin-top:17px;border:1px solid rgba(255,179,71,.45);color:#ffe0b0;background:rgba(255,179,71,.08);font-size:.84rem}.notice.show{display:block}
+    .faq-list{max-width:850px}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:var(--white);display:flex;justify-content:space-between;align-items:center;text-align:left;padding:21px 0;font-weight:700;cursor:pointer}.faq-q span:last-child{color:var(--orange);font-size:1.3rem;transition:.2s}.faq-a{max-height:0;overflow:hidden;color:var(--muted);transition:max-height .3s ease}.faq-a p{margin:0;padding:0 35px 20px 0;font-size:.9rem}.faq-item.open .faq-a{max-height:180px}.faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
+    .final-cta{padding:100px 0;text-align:center;background:radial-gradient(ellipse at center,rgba(255,87,51,.18),transparent 55%),#19110f;border-block:1px solid rgba(255,87,51,.2)}.final-cta h2{font:700 clamp(3.5rem,9vw,7.5rem)/.88 "Oswald",sans-serif;text-transform:uppercase;max-width:900px;margin:16px auto 22px}.final-cta p{color:#c5bdb5;margin:0 auto 30px;max-width:550px}
+    footer{padding:36px 0;background:#0b0b0b}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:25px}.footer-brand p{font-size:.75rem;color:var(--muted);margin:8px 0 0}.footer-links{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.78rem}.footer-links a:hover{color:var(--gold)}.copyright{border-top:1px solid var(--line);margin-top:27px;padding-top:18px;color:#706b66;font-size:.7rem;display:flex;justify-content:space-between;gap:15px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.nav-links{gap:15px}.hero-grid{grid-template-columns:1fr .7fr}.hero-art{transform:scale(.82);transform-origin:center}.about-grid{gap:38px}.event-panel{grid-template-columns:repeat(3,1fr)}.event-item:nth-child(3){border-right:0}.event-item:nth-child(n+4){border-top:1px solid var(--line)}.why-grid{grid-template-columns:repeat(2,1fr)}.register-grid{gap:30px}}
+    @media(max-width:700px){.container{width:min(100% - 34px,var(--max))}.section{padding:76px 0}.nav{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px 25px;background:#111;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links .nav-cta{text-align:center}.hero{height:auto;min-height:790px;padding:125px 0 85px}.hero-grid{grid-template-columns:1fr;gap:0}.hero h1{font-size:clamp(4.5rem,18vw,7.2rem)}.hero-art{height:300px;transform:scale(.65);margin:-10px auto -15px;width:100%}.hero-stamp{right:5%;bottom:0}.scroll-note{display:none}.about-grid{grid-template-columns:1fr;gap:30px}.about-art{min-height:270px}.quote-mark{font-size:8rem}.category-grid{grid-template-columns:1fr 1fr}.category-card,.category-card:nth-child(4),.category-card:nth-child(5){grid-column:auto;min-height:260px;padding:20px}.category-card:last-child{grid-column:1/-1}.category-card h3{font-size:1.65rem}.eligibility-inner{align-items:flex-start;flex-direction:column}.event-panel{grid-template-columns:1fr 1fr}.event-item{border-bottom:1px solid var(--line)}.event-item:nth-child(2n){border-right:0}.event-item:nth-child(3){border-right:1px solid var(--line)}.event-item:last-child{grid-column:1/-1;border-bottom:0}.register-grid{grid-template-columns:1fr}.register-aside{position:static}.form-card{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.guardian-box.show{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.copyright{flex-direction:column}.values{gap:8px}}
+    @media(max-width:420px){.category-grid{grid-template-columns:1fr}.category-card:last-child{grid-column:auto}.hero-actions .btn{width:100%}.event-panel{grid-template-columns:1fr 1fr}.event-item{padding:19px 14px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Dil Se Open Mic home"><span class="brand-mark">DS</span><span>DIL SE <span class="accent">OPEN MIC</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#categories">Categories</a><a href="#details">Event Details</a><a href="#faq">FAQs</a>
+        <a class="nav-cta" href="#register">Register Now ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">A stage for every story</div>
+          <h1>DIL SE <span>OPEN MIC</span></h1>
+          <p class="hero-sub">Your voice. Your stage. Your story. A platform for young voices, fearless expression and extraordinary talent.</p>
+          <div class="hero-meta"><span><i class="dot"></i> Ages 10–25</span><span><i class="dot"></i> 5 Creative Categories</span></div>
+          <div class="hero-actions"><a class="btn" href="#register">Register your interest <span>↗</span></a><a class="btn btn-outline" href="#categories">Explore categories</a></div>
+          <div class="hostline">An open platform hosted by <strong>Felix Dalmet</strong></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a microphone under a spotlight">
+          <div class="spotlight"></div><div class="mic-orbit"></div>
+          <div class="mic"><div class="mic-head"></div><div class="mic-neck"></div><div class="mic-body"></div><div class="mic-base"></div></div>
+          <div class="orbit-label one">Find your voice · Own the moment</div><div class="orbit-label two">Creativity without limits</div>
+          <div class="hero-stamp">THE<br>STAGE<br>IS YOURS ✦</div>
+        </div>
+      </div>
+      <div class="scroll-note">Scroll to discover</div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Poetry</span><span>Mimicry</span><span>Acting</span><span>Stand-up Comedy</span><span>Instrumental</span><span>Poetry</span><span>Mimicry</span><span>Acting</span><span>Stand-up Comedy</span><span>Instrumental</span></div></div>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-art reveal"><div class="quote-mark">“</div><small>Speak from the heart. Perform from the soul.</small></div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">The story behind the stage</div>
+          <h2>Every heart has a story. <span class="accent">Every voice</span> deserves a stage.</h2>
+          <p>Dil Se Open Mic is a platform for young individuals to express themselves, share their creativity and experience the energy of performing. Whether your language is poetry, humour, acting, mimicry or music, this is a space to let your talent be heard.</p>
+          <p>Come as you are, bring what you love, and take your moment in the spotlight.</p>
+          <div class="values"><div class="value"><b>01</b> Express yourself</div><div class="value"><b>02</b> Discover confidence</div><div class="value"><b>03</b> Showcase creativity</div><div class="value"><b>04</b> Connect through art</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">Choose your expression</div><h2>Five ways to <span class="accent">own the stage.</span></h2><p>Different talents. Different stories. One stage. Find the category that feels like you.</p></div>
+        <div class="category-grid">
+          <article class="category-card cat-mimic reveal"><span class="number">01 / IMPRESSIONS</span><span class="symbol">◉</span><h3>Mimicry</h3><p>Bring personalities and characters to life through your impressions and expressions.</p></article>
+          <article class="category-card cat-poetry reveal"><span class="number">02 / WORDS</span><span class="symbol">✍</span><h3>Poetry</h3><p>Turn thoughts, emotions and stories into powerful words that stay with people.</p></article>
+          <article class="category-card cat-acting reveal"><span class="number">03 / PERFORMANCE</span><span class="symbol">✦</span><h3>Acting</h3><p>Step into a character and express your creativity through dramatic performance.</p></article>
+          <article class="category-card cat-comedy reveal"><span class="number">04 / HUMOUR</span><span class="symbol">☻</span><h3>Stand-up Comedy</h3><p>Make people laugh with your humour, observations and original jokes.</p></article>
+          <article class="category-card cat-instrumental reveal"><span class="number">05 / MUSIC</span><span class="symbol">♫</span><h3>Instrumental</h3><p>Let your instrument do the talking. Share your music, your way.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section eligibility">
+      <div class="container eligibility-inner">
+        <div class="age-big reveal">10–25<small>YEARS</small></div>
+        <div class="eligibility-copy reveal"><div class="eyebrow">Your age. Your opportunity.</div><h2>Young talent belongs in the spotlight.</h2><p>Open to aspiring performers aged 10 to 25. Participants under 18 will need appropriate parent or legal guardian consent before registration can be finalized.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">More than a performance</div><h2>Make your moment <span class="accent">matter.</span></h2><p>A stage can be the start of something bigger. Bring your talent and take the next step.</p></div>
+        <div class="why-grid">
+          <article class="why-card reveal"><div class="icon">✦</div><h3>Build Confidence</h3><p>Find your voice and become more comfortable expressing yourself.</p></article>
+          <article class="why-card reveal"><div class="icon">◉</div><h3>Show Your Talent</h3><p>Share the skill, creativity or passion that makes you unique.</p></article>
+          <article class="why-card reveal"><div class="icon">⌁</div><h3>Gain Experience</h3><p>Experience the excitement of preparing for and performing on stage.</p></article>
+          <article class="why-card reveal"><div class="icon">♡</div><h3>Meet Your People</h3><p>Connect with other young people who love creativity and performance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">Plan your moment</div><h2>Event <span class="accent">details.</span></h2><p>Key event information will be updated here as soon as it is confirmed.</p></div>
+        <div class="event-panel reveal">
+          <div class="event-item"><small>Date</small><strong>To be announced</strong></div>
+          <div class="event-item"><small>Time</small><strong>To be announced</strong></div>
+          <div class="event-item"><small>Venue</small><strong>To be announced</strong></div>
+          <div class="event-item"><small>Deadline</small><strong>To be announced</strong></div>
+          <div class="event-item"><small>Entry fee</small><strong>To be announced</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section register" id="register">
+      <div class="container register-grid">
+        <div class="register-aside reveal">
+          <div class="eyebrow">Take the first step</div>
+          <h2>Your moment <span class="accent">starts here.</span></h2>
+          <p>Tell us a little about yourself and the performance you would love to bring to the stage.</p>
+          <p class="muted">This page is currently a front-end preview. Registration details will not be transmitted or stored until a secure registration service is connected.</p>
+        </div>
+        <div class="form-card reveal">
+          <form id="registrationForm" novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required placeholder="Your full name"></div>
+              <div class="field"><label for="dob">Date of birth *</label><input id="dob" name="dob" type="date" required></div>
+              <div class="field"><label for="age">Age</label><input id="age" name="age" readonly placeholder="Auto-calculated"><span class="hint">Eligible age: 10–25 years</span></div>
+              <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+() -]{8,18}" placeholder="+91 00000 00000"></div>
+              <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="field"><label for="city">City *</label><input id="city" name="city" required autocomplete="address-level2" placeholder="Your city"></div>
+              <div class="field"><label for="category">Performance category *</label><select id="category" name="category" required><option value="">Choose a category</option><option>Mimicry</option><option>Poetry</option><option>Acting</option><option>Stand-up Comedy</option><option>Instrumental</option></select></div>
+              <div class="field"><label for="title">Performance title *</label><input id="title" name="title" required placeholder="Name your performance"></div>
+              <div class="field full"><label for="description">Brief performance description</label><textarea id="description" name="description" placeholder="Tell us what you plan to perform (optional)"></textarea></div>
+              <div class="field full"><label for="instagram">Instagram username (optional)</label><input id="instagram" name="instagram" placeholder="@yourusername"></div>
+              <div class="guardian-box" id="guardianBox">
+                <div class="field"><label for="guardianName">Parent / guardian name *</label><input id="guardianName" name="guardianName" placeholder="Full name"></div>
+                <div class="field"><label for="guardianPhone">Parent / guardian contact *</label><input id="guardianPhone" name="guardianPhone" type="tel" placeholder="Contact number"></div>
+                <div class="hint" style="grid-column:1/-1">Participants under 18 must have a parent or legal guardian complete the required consent process. This form alone does not constitute guardian consent.</div>
+              </div>
+              <div class="field full"><label for="video">Performance video link (optional)</label><input id="video" name="video" type="url" placeholder="https://..."><span class="hint">Share a link only if you have one. Do not upload sensitive personal material.</span></div>
+              <div class="field full"><label class="checkline"><input type="checkbox" id="privacy" required><span>I understand that my details are being entered into a website preview and will not be submitted until a secure registration system is connected. *</span></label></div>
+              <div class="field full"><label class="checkline"><input type="checkbox" id="terms" required><span>I confirm that the information provided is accurate and agree to review the event terms before final registration. *</span></label></div>
+            </div>
+            <button class="btn form-submit" type="submit">Check my details <span>↗</span></button>
+            <p class="form-note">* Required fields. This preview does not submit data to an organizer or create an official registration.</p>
+            <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head reveal"><div class="eyebrow">Need to know?</div><h2>Frequently asked <span class="accent">questions.</span></h2><p>Some event rules are still to be confirmed. The details below will be updated before registrations officially open.</p></div>
+        <div class="faq-list reveal">
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Who can participate?</span><span>＋</span></button><div class="faq-a"><p>Individuals aged 10 to 25 years are eligible. Participants under 18 will require appropriate parent or legal guardian consent.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do I need previous stage experience?</span><span>＋</span></button><div class="faq-a"><p>The event is intended as a platform for young talent. Final participation and selection rules will be announced by the organizer.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Can I participate in more than one category?</span><span>＋</span></button><div class="faq-a"><p>The number of categories a participant may enter has not yet been confirmed. Please check the official event guidelines when published.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is there a registration fee?</span><span>＋</span></button><div class="faq-a"><p>The registration fee has not yet been announced. Confirmed information will appear in the Event Details section.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What is the performance duration?</span><span>＋</span></button><div class="faq-a"><p>Performance time limits are yet to be announced. Please refer to the final event rules before preparing your act.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Do instrumental performers need to bring their own instruments?</span><span>＋</span></button><div class="faq-a"><p>Equipment and instrument arrangements will be confirmed with the venue and shared with registered participants.</p></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Will there be auditions or certificates?</span><span>＋</span></button><div class="faq-a"><p>Audition, selection and certificate details have not yet been finalized. Official updates will be shared by the organizer.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container reveal"><div class="eyebrow">Your story deserves a stage</div><h2>The stage is waiting.<br><span class="accent">Are you ready?</span></h2><p>Your talent deserves to be seen. Your voice deserves to be heard. Take the first step towards your moment.</p><a class="btn" href="#register">Register your interest ↗</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">DS</span><span>DIL SE <span class="accent">OPEN MIC</span></span></a><p>Your Voice. Your Stage. Your Story. · Hosted by Felix Dalmet</p></div>
+        <div class="footer-links"><a href="#about">About</a><a href="#categories">Categories</a><a href="#register">Register</a><a href="#faq">FAQs</a></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> Dil Se Open Mic. All rights reserved.</span><span>Event details subject to official confirmation.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.textContent='☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const dob = document.getElementById('dob');
+    const ageInput = document.getElementById('age');
+    const guardianBox = document.getElementById('guardianBox');
+    const guardianName = document.getElementById('guardianName');
+    const guardianPhone = document.getElementById('guardianPhone');
+    const formNotice = document.getElementById('formNotice');
+
+    // Prevent selecting a future date of birth.
+    dob.max = new Date().toISOString().split('T')[0];
+    function calculateAge(dateString) {
+      if (!dateString) return null;
+      const birth = new Date(dateString + 'T00:00:00');
+      const today = new Date();
+      let age = today.getFullYear() - birth.getFullYear();
+      const monthDiff = today.getMonth() - birth.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) age--;
+      return age;
+    }
+    dob.addEventListener('change', () => {
+      const age = calculateAge(dob.value);
+      ageInput.value = age === null ? '' : age;
+      const minor = age !== null && age < 18;
+      guardianBox.classList.toggle('show', minor);
+      guardianName.required = minor;
+      guardianPhone.required = minor;
+      if (age !== null && (age < 10 || age > 25)) {
+        formNotice.textContent = 'The stated age range is 10–25 years. Please check the date of birth entered.';
+        formNotice.classList.add('show');
+      } else {
+        formNotice.classList.remove('show');
+      }
+    });
+
+    document.getElementById('registrationForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      formNotice.classList.remove('show');
+      if (!form.reportValidity()) return;
+      const age = calculateAge(dob.value);
+      if (age === null || age < 10 || age > 25) {
+        formNotice.textContent = 'Sorry, the stated eligibility is 10–25 years. Please check your date of birth.';
+        formNotice.classList.add('show'); return;
+      }
+      if (age < 18 && (!guardianName.value.trim() || !guardianPhone.value.trim())) {
+        formNotice.textContent = 'Please provide parent or legal guardian contact details for participants under 18.';
+        formNotice.classList.add('show'); return;
+      }
+      formNotice.textContent = 'Your details passed the front-end checks. This is only a website preview: no information has been sent or saved, and you are not officially registered. Connect a secure backend and guardian-consent workflow before opening registrations.';
+      formNotice.classList.add('show');
+      formNotice.scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+
+    document.querySelectorAll('.faq-q').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
